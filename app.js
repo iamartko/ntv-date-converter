@@ -4,6 +4,8 @@
   var TRANSLATIONS = {
     ua: {
       title: 'Конвертер дат "Нові Темні Віки"',
+      metaDescription: 'Двосторонній конвертер дат між земним та марсіанським календарем з серії «Нові Темні Віки» Макса Кідрука.',
+      ogTitle: 'Конвертер дат "Нові Темні Віки"',
       directionEarthToNtv: 'Земля → Марс',
       directionNtvToEarth: 'Марс → Земля',
       earthDate: 'Дата на Землі',
@@ -49,6 +51,8 @@
     },
     en: {
       title: '"New Dark Ages" Date Converter',
+      metaDescription: 'Bidirectional Earth ↔ Mars date converter from Max Kidruk\'s "New Dark Ages" series.',
+      ogTitle: '"New Dark Ages" Date Converter',
       directionEarthToNtv: 'Earth → Mars',
       directionNtvToEarth: 'Mars → Earth',
       earthDate: 'Earth Date',
@@ -97,6 +101,11 @@
   var currentLang = 'ua';
   var currentDirection = 'earthToNtv';
 
+  function updateMetaContent(id, content) {
+    var el = document.getElementById(id);
+    if (el) el.setAttribute('content', content);
+  }
+
   function setLanguage(lang) {
     currentLang = lang;
     var t = TRANSLATIONS[lang];
@@ -140,6 +149,12 @@
 
     document.documentElement.lang = lang === 'ua' ? 'uk' : 'en';
     document.title = t.title;
+
+    updateMetaContent('meta-description', t.metaDescription);
+    updateMetaContent('og-title', t.ogTitle);
+    updateMetaContent('og-description', t.metaDescription);
+    updateMetaContent('twitter-title', t.ogTitle);
+    updateMetaContent('twitter-description', t.metaDescription);
 
     renderReferenceTable();
 
