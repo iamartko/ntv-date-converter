@@ -365,6 +365,15 @@ body {
   text-decoration: underline;
 }
 
+.footer__year {
+  margin-top: 8px;
+}
+
+.footer__disclaimer {
+  margin-top: 6px;
+  font-size: 0.75rem;
+}
+
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
