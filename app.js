@@ -38,8 +38,8 @@
         return r.monthNameUa + ' ' + r.day + ', рік ' + r.ntvYear + ' (сол ' + r.sol + ')';
       },
       resultNtvToEarth: function (r) {
-        var monthNames = ['', 'Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень',
-          'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
+        var monthNames = ['', 'січня', 'лютого', 'березня', 'квітня', 'травня', 'червня',
+          'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'];
         return r.day + ' ' + monthNames[r.month] + ' ' + r.year;
       },
       earthMonths: ['', 'Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень',
@@ -247,6 +247,10 @@
       earthInputs.style.display = 'none';
       ntvInputs.style.display = '';
       dirLabel.textContent = TRANSLATIONS[currentLang].directionNtvToEarth;
+      var ntvYearInput = document.getElementById('ntv-year');
+      if (!ntvYearInput.value) {
+        ntvYearInput.value = 46;
+      }
     }
 
     hideResult();

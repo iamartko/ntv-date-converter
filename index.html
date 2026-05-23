@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Конвертер дат "Нові Темні Віки"</title>
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -38,7 +38,7 @@
           <div class="input-group" id="earth-inputs">
             <label data-i18n="earthDate">Дата Землі</label>
             <div class="input-row">
-              <input type="number" id="earth-year" class="input-field" placeholder="Рік" min="1583">
+              <input type="number" id="earth-year" class="input-field" placeholder="Рік" min="1583" inputmode="numeric">
               <select id="earth-month" class="input-field">
                 <option value="">Місяць</option>
                 <option value="1">Січень</option>
@@ -54,18 +54,18 @@
                 <option value="11">Листопад</option>
                 <option value="12">Грудень</option>
               </select>
-              <input type="number" id="earth-day" class="input-field" placeholder="День" min="1" max="31">
+              <input type="number" id="earth-day" class="input-field" placeholder="День" min="1" max="31" inputmode="numeric">
             </div>
           </div>
 
           <div class="input-group" id="ntv-inputs" style="display:none;">
             <label data-i18n="ntvDate">Дата Марсу</label>
             <div class="input-row">
-              <input type="number" id="ntv-year" class="input-field" placeholder="Рік марсіанський">
+              <input type="number" id="ntv-year" class="input-field" placeholder="Рік марсіанський" inputmode="numeric">
               <select id="ntv-month" class="input-field">
                 <option value="">Місяць</option>
               </select>
-              <input type="number" id="ntv-day" class="input-field" placeholder="Сол" min="1">
+              <input type="number" id="ntv-day" class="input-field" placeholder="Сол" min="1" inputmode="numeric">
             </div>
           </div>
         </div>
